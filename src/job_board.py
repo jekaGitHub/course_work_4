@@ -77,14 +77,8 @@ class Vacancy:
     def __ge__(self, other):
         return self.salary_from >= other.salary_from
 
-    # def __ne__(self, other):
-    #     pass
-
     def __le__(self, other):
         return self.salary_from <= other.salary_from
-
-    # def __eq__(self, other):
-    #     pass
 
 
 class JsonHandler(JsonHandlerBase):
