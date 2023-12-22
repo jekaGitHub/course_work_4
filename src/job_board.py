@@ -87,5 +87,12 @@ class Vacancy:
         pass
 
 
-class JsonHandler(JsonHandler):
-    pass
+class JsonHandler(JsonHandlerBase):
+    def save_vacancy(self):
+        pass
+
+    def get_vacancy(self):
+        pass
+
+    def delete_vacancy(self):
+        pass
