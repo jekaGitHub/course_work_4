@@ -15,6 +15,20 @@ class JobBoard(ABC):
         pass
 
 
+class JsonHandler(ABC):
+    @abstractmethod
+    def save_vacancy(self):
+        pass
+
+    @abstractmethod
+    def get_vacancy(self):
+        pass
+
+    @abstractmethod
+    def delete_vacancy(self):
+        pass
+
+
 class SuperJob(JobBoard):
     def __init__(self):
         self.list_vacancies = []
