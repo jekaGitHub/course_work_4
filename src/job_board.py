@@ -15,7 +15,7 @@ class JobBoard(ABC):
         pass
 
 
-class JsonHandler(ABC):
+class JsonHandlerBase(ABC):
     @abstractmethod
     def save_vacancy(self):
         pass
@@ -85,3 +85,7 @@ class Vacancy:
 
     def __eq__(self, other):
         pass
+
+
+class JsonHandler(JsonHandler):
+    pass
