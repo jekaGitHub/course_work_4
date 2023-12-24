@@ -67,6 +67,7 @@ class HH(JobBoard):
 
 
 class Vacancy:
+    """Класс для работы с вакансиями"""
     def __init__(self, name, vacancy_url, salary_from, salary_to, description):
         self.name = name
         self.vacancy_url = vacancy_url
@@ -74,11 +75,30 @@ class Vacancy:
         self.salary_to = salary_to
         self.description = description
 
+    def __str__(self):
+        return f"Вакансия: {self.name}"\
+               f"Описание: {self.description}"\
+               f"Зарплата: от {self.salary_from} до {self.salary_to}"\
+               f"Ссылка на вакансию: {self.vacancy_url}"
+
     def __ge__(self, other):
         return self.salary_from >= other.salary_from
 
     def __le__(self, other):
         return self.salary_from <= other.salary_from
+
+    def __eq__(self, other):
+        return self.salary_from == other.salary_from
+
+    def get_vacancy_to_dict(self):
+        """Из экземпляра Vacancy получаем данные в формате словаря"""
+        return {
+            'name': self.name,
+            'vacancy_url': self.vacancy_url,
+            'salary_from': self.salary_from,
+            'salary_to': self.salary_to,
+            'description': self.description
+        }
 
 
 class JsonHandler(JsonHandlerBase):
