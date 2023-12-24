@@ -30,26 +30,43 @@ class JsonHandlerBase(ABC):
 
 
 class SuperJob(JobBoard):
+    """Класс для работы с API SuperJob.ru"""
     def __init__(self):
         self.list_vacancies = []
         self.api_key = API_KEY
 
-    def get_vacancies(self, search_text):
+    def get_vacancies(self, search_text: str) -> list:
+        """Функция для получения вакансий с SuperJob.ru."""
         url = 'https://api.superjob.ru/3.0/vacancies/'
         params = {'keyword': search_text, 'count': 100, 'page': 0}
 
         headers = {'X-Api-App-Id': self.api_key}
         response = requests.get(url, params=params, headers=headers)
         data = response.json()
-        self.list_vacancies.append(data['objects'])
+        for item in data['objects']:
+            if item["payment_from"] == 0:
+                continue
+            elif item["payment_to"] == 0:
+                continue
+            else:
+                vacancy = Vacancy(
+                    item["profession"],
+                    item["link"],
+                    item["payment_from"],
+                    item["payment_to"],
+                    item["candidat"]
+                )
+                self.list_vacancies.append(vacancy)
         return self.list_vacancies
 
 
 class HH(JobBoard):
+    """Класс для работы с API HH.RU"""
     def __init__(self):
         self.list_vacancies = []
 
-    def get_vacancies(self, search_text):
+    def get_vacancies(self, search_text: str) -> list:
+        """Функция для получения вакансий с HeadHunter.ru."""
         url = "https://api.hh.ru/vacancies"
         params = {
             'text': search_text,
@@ -62,7 +79,15 @@ class HH(JobBoard):
         }
         response = requests.get(url, params=params)
         data = response.json()
-        self.list_vacancies.append(data['items'])
+        for item in data['items']:
+            vacancy = Vacancy(
+                item["name"],
+                item["alternate_url"],
+                item["salary"]["from"],
+                item["salary"]["to"],
+                item["snippet"]["responsibility"]
+            )
+            self.list_vacancies.append(vacancy)
         return self.list_vacancies
 
 
