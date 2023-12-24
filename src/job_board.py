@@ -1,3 +1,4 @@
+import json
 import os
 from abc import ABC, abstractmethod
 
@@ -10,18 +11,20 @@ API_KEY: str = os.getenv('API_KEY_SJ')
 
 
 class JobBoard(ABC):
+    """Абстрактный класс получения списка вакансий по API."""
     @abstractmethod
     def get_vacancies(self, search_text):
         pass
 
 
 class JsonHandlerBase(ABC):
+    """Абстрактный класс обработки списка вакансий."""
     @abstractmethod
-    def save_vacancy(self):
+    def save_vacancy(self, vacancies):
         pass
 
     @abstractmethod
-    def get_vacancy(self):
+    def get_vacancy(self, salary_from, salary_to):
         pass
 
     @abstractmethod
@@ -138,11 +141,27 @@ class Vacancy:
 
 
 class JsonHandler(JsonHandlerBase):
-    def save_vacancy(self):
-        pass
+    """Класс для сохранения вакансии в файл json и для обработки вакансий в файле"""
+    def save_vacancy(self, vacancies):
+        """Функция для сохранения в файл"""
+        list_vacancies = []
+        for vacancy in vacancies:
+            list_vacancies.append(vacancy.get_vacancy_to_dict())
 
-    def get_vacancy(self):
-        pass
+        with open("../data/vacancies.json", 'w') as f:
+            json.dump(list_vacancies, f, ensure_ascii=False, indent=4)
+
+    def get_vacancy(self, salary_from, salary_to) -> list:
+        """Функция фильтрует вакансии по указанной зарплате и выдает пользователю"""
+        list_vacancies_by_salary = []
+
+        with open("../data/vacancies.json", 'r') as f:
+            list_vacancies = json.load(f)
+        for vacancy in list_vacancies:
+            if vacancy["salary_from"] >= salary_from and vacancy["salary_to"] <= salary_to:
+                list_vacancies_by_salary.append(Vacancy.get_vacancy_from_dict(vacancy))
+
+        return list_vacancies_by_salary
 
     def delete_vacancy(self):
         pass
