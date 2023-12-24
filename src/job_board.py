@@ -125,6 +125,17 @@ class Vacancy:
             'description': self.description
         }
 
+    @staticmethod
+    def get_vacancy_from_dict(dict_item):
+        """Из формата словаря получаем экземпляр класса Vacancy"""
+        return Vacancy(
+            dict_item["name"],
+            dict_item["vacancy_url"],
+            dict_item["salary_from"],
+            dict_item["salary_to"],
+            dict_item["description"]
+        )
+
 
 class JsonHandler(JsonHandlerBase):
     def save_vacancy(self):
