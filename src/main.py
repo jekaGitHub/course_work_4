@@ -8,7 +8,7 @@ def user_interaction():
     list_vacancies = []
 
     user_input = input("Введите цифру 1, если хотите получить вакансии с сайта HeadHunter.\n"
-                       "Введите цифру 2, если хотите получить вакансии с сайта SuperJob.")
+                       "Введите цифру 2, если хотите получить вакансии с сайта SuperJob.\n")
     if user_input == '1' or user_input == '2':
         vacancy_name = input("Введите название профессии для поиска вакансий на сайте:\n")
         if user_input == '1':

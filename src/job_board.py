@@ -104,9 +104,9 @@ class Vacancy:
         self.description = description
 
     def __str__(self):
-        return f"Вакансия: {self.name}"\
-               f"Описание: {self.description}"\
-               f"Зарплата: от {self.salary_from} до {self.salary_to}"\
+        return f"Вакансия: {self.name}\n"\
+               f"Описание: {self.description}\n"\
+               f"Зарплата: от {self.salary_from} до {self.salary_to}\n"\
                f"Ссылка на вакансию: {self.vacancy_url}"
 
     def __ge__(self, other):
