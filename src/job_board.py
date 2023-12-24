@@ -164,4 +164,4 @@ class JsonHandler(JsonHandlerBase):
         return list_vacancies_by_salary
 
     def delete_vacancy(self):
-        pass
+        os.system(r' >../data/vacancies.json')
