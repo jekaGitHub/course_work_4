@@ -43,8 +43,3 @@ def user_interaction():
 
 if __name__ == '__main__':
     user_interaction()
-    # sj = SuperJob()
-    # print(sj.get_vacancies("PHP"))
-
-    # hh = HH()
-    # print(hh.get_vacancies("Python"))

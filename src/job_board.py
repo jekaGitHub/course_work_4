@@ -151,7 +151,7 @@ class JsonHandler(JsonHandlerBase):
         with open("../data/vacancies.json", 'w') as f:
             json.dump(list_vacancies, f, ensure_ascii=False, indent=4)
 
-    def get_vacancy(self, salary_from, salary_to) -> list:
+    def get_vacancy(self, salary_from: int, salary_to: int) -> list:
         """Функция фильтрует вакансии по указанной зарплате и выдает пользователю"""
         list_vacancies_by_salary = []
 
