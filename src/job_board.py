@@ -83,9 +83,9 @@ class HH(JobBoard):
         response = requests.get(url, params=params)
         data = response.json()
         for item in data['items']:
-            if item["salary"]["from"] == 0:
+            if item["salary"]["from"] == 0 or item["salary"]["from"] is None:
                 continue
-            elif item["salary"]["to"] == 0:
+            elif item["salary"]["to"] == 0 or item["salary"]["to"] is None:
                 continue
             else:
                 vacancy = Vacancy(
@@ -170,3 +170,15 @@ class JsonHandler(JsonHandlerBase):
 
     def delete_vacancy(self):
         os.system(r' >../data/vacancies.json')
+
+
+# дополнительная функция для фильтрации вакансий
+def get_vacancies_by_description(vacancies: list[dict], text: str) -> list[dict]:
+    """Функция фильтрации вакансий по переданному слову, которое содержится в описании вакансии.
+    :param vacancies: список словарей с вакансиями
+    :param text: значение для поиска в описании вакансии
+    :return: список словарей
+    """
+
+    result_list = [item for item in vacancies if text in item.get("description")]
+    return result_list
