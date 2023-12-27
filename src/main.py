@@ -1,4 +1,4 @@
-from src.job_board import SuperJob, HH, Vacancy, JsonHandler
+from src.job_board import SuperJob, HH, Vacancy, JsonHandler, get_vacancies_by_description
 
 
 def user_interaction():
@@ -34,6 +34,17 @@ def user_interaction():
                 vacancies = json_saver.get_vacancy(salary_from, salary_to)
                 if vacancies is None:
                     print(f"Нет вакансий с зарплатой от {salary_from} до {salary_to} рублей.")
+                else:
+                    for vacancy in vacancies:
+                        print(vacancy)
+
+            vacancy_text = input("Хотите отфильтровать вакансии по поиску текста в описании вакансии? "
+                                 "Введите 'да' или 'нет'\n")
+            if vacancy_text.lower() == "да":
+                text_search = input("Введите текст, который хотите найти в описании вакансии:\n")
+                vacancies = get_vacancies_by_description(list_vacancies, text_search)
+                if vacancies is None:
+                    print(f"Нет вакансий с текстом {text_search} в описании вакансии.")
                 else:
                     for vacancy in vacancies:
                         print(vacancy)
