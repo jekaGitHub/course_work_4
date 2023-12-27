@@ -83,14 +83,19 @@ class HH(JobBoard):
         response = requests.get(url, params=params)
         data = response.json()
         for item in data['items']:
-            vacancy = Vacancy(
-                item["name"],
-                item["alternate_url"],
-                item["salary"]["from"],
-                item["salary"]["to"],
-                item["snippet"]["responsibility"]
-            )
-            self.list_vacancies.append(vacancy)
+            if item["salary"]["from"] == 0:
+                continue
+            elif item["salary"]["to"] == 0:
+                continue
+            else:
+                vacancy = Vacancy(
+                    item["name"],
+                    item["alternate_url"],
+                    item["salary"]["from"],
+                    item["salary"]["to"],
+                    item["snippet"]["responsibility"]
+                )
+                self.list_vacancies.append(vacancy)
         return self.list_vacancies
 
 
