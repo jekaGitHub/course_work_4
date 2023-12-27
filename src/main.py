@@ -38,16 +38,16 @@ def user_interaction():
                     for vacancy in vacancies:
                         print(vacancy)
 
-            vacancy_text = input("Хотите отфильтровать вакансии по поиску текста в описании вакансии? "
-                                 "Введите 'да' или 'нет'\n")
-            if vacancy_text.lower() == "да":
-                text_search = input("Введите текст, который хотите найти в описании вакансии:\n")
-                vacancies = get_vacancies_by_description(list_vacancies, text_search)
-                if vacancies is None:
-                    print(f"Нет вакансий с текстом {text_search} в описании вакансии.")
-                else:
-                    for vacancy in vacancies:
-                        print(vacancy)
+            # vacancy_text = input("Хотите отфильтровать вакансии по поиску текста в описании вакансии? "
+            #                      "Введите 'да' или 'нет'\n")
+            # if vacancy_text.lower() == "да":
+            #     text_search = input("Введите текст, который хотите найти в описании вакансии:\n")
+            #     vacancies = get_vacancies_by_description(list_vacancies, text_search)
+            #     if vacancies is None:
+            #         print(f"Нет вакансий с текстом {text_search} в описании вакансии.")
+            #     else:
+            #         for vacancy in vacancies:
+            #             print(vacancy)
     else:
         print("Вы не выбрали сайт или ввели значение, которого нет. Попробуйте снова!")
 
