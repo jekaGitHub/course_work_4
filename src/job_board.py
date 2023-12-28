@@ -173,12 +173,12 @@ class JsonHandler(JsonHandlerBase):
 
 
 # дополнительная функция для фильтрации вакансий
-def get_vacancies_by_description(vacancies: list[dict], text: str) -> list[dict]:
+def get_vacancies_by_description(vacancies: list, text: str) -> list:
     """Функция фильтрации вакансий по переданному слову, которое содержится в описании вакансии.
     :param vacancies: список словарей с вакансиями
     :param text: значение для поиска в описании вакансии
-    :return: список словарей
+    :return: список
     """
 
-    result_list = [item for item in vacancies if text in item.get("description")]
+    result_list = [item for item in vacancies if text in item.description]
     return result_list

@@ -1,66 +1,73 @@
 [
     {
-        "name": "Python/Django разработчик Junior+ / Junior Backend-разработчик",
-        "vacancy_url": "https://hh.ru/vacancy/90501113",
+        "name": "Software Developer Python",
+        "vacancy_url": "https://hh.ru/vacancy/90200345",
         "salary_from": 80000,
-        "salary_to": 120000,
-        "description": "Участвовать в проектировании базы данных. Создавать интеграции с внешними сервисами. Дорабатывать существующие скрипты. Писать SQL-запросы. Разрабатывать админку и REST..."
+        "salary_to": 200000,
+        "description": "Разработка архитектуры новых проектов и технологических решений. Поддержка, развитие и оптимизация существующего кода бекендов различных сервисов действующих проектов. "
     },
     {
-        "name": "Python-разработчик",
-        "vacancy_url": "https://hh.ru/vacancy/90352955",
-        "salary_from": 120000,
-        "salary_to": 150000,
-        "description": "В область наших интересов входит развёртывание на различных маркетплейсах и отладка стабильной и прибыльной торговли. Оперативный контакт с руководителями."
+        "name": "Senior Python Developer (IoT, platform development)",
+        "vacancy_url": "https://hh.ru/vacancy/91117856",
+        "salary_from": 300000,
+        "salary_to": 400000,
+        "description": "Разработка бэкенда облака на Django, к которому потенциально подключаются десятки тысяч контроллеров. Разработка агента контроллера (<highlighttext>Python</highlighttext>) для связи контроллера с..."
     },
     {
-        "name": "Junior+/Middle Backend-разработчик (Python, fastapi, mongodb)",
-        "vacancy_url": "https://hh.ru/vacancy/90730547",
-        "salary_from": 50000,
-        "salary_to": 120000,
-        "description": "Вовлеченность. Реализация задач среднего уровня сложности по разработки. Содействие команде. Оптимизация кода. Участие в обзорах кода."
-    },
-    {
-        "name": "Middle Python Developer",
-        "vacancy_url": "https://hh.ru/vacancy/90385551",
-        "salary_from": 150000,
-        "salary_to": 250000,
+        "name": "Senior Python Developer",
+        "vacancy_url": "https://hh.ru/vacancy/90405323",
+        "salary_from": 350000,
+        "salary_to": 500000,
         "description": "Требования: - Имеется опыт разработки и сопровождения продуктов на платформе Linux с применением <highlighttext>Python</highlighttext>, Redis, Django, MQ-сервисов, понимание вопросов развертывания..."
     },
     {
-        "name": "Разработчик HR Операций Python (Удаленно)",
-        "vacancy_url": "https://hh.ru/vacancy/90118113",
-        "salary_from": 120000,
-        "salary_to": 180000,
-        "description": "Основные задачи и функции: Привлекайте кандидатов в воронку найма, в том числе за счет рекрутеров и автоматизации привлечения. "
+        "name": "Python-разработчик систем сбора",
+        "vacancy_url": "https://hh.ru/vacancy/72687495",
+        "salary_from": 100000,
+        "salary_to": 150000,
+        "description": "Написание чистого, понятного кода. Реализация систем сбора. Анализ и исправление ошибок. Сопровождение запуска и эксплуатации сборщиков в продакшене."
     },
     {
-        "name": "Middle Python backend developer",
-        "vacancy_url": "https://hh.ru/vacancy/90143523",
-        "salary_from": 110000,
-        "salary_to": 180000,
-        "description": "Разработка веб-приложений и микросервисов. Участие в разработке архитектур проектов. Ведение и поддержка в актуальном состоянии технической документации и тестов. "
+        "name": "Python-разработчик в R&D отдел",
+        "vacancy_url": "https://hh.ru/vacancy/72687478",
+        "salary_from": 100000,
+        "salary_to": 150000,
+        "description": "Написание чистого, понятного кода. Реализация сетевых клиентов и протоколов по документации. Взаимодействие с исследователями. Покрытие тестами. Написание документации. "
     },
     {
-        "name": "Senior Python Developer (Удалённо)",
-        "vacancy_url": "https://hh.ru/vacancy/88883138",
-        "salary_from": 300000,
-        "salary_to": 400000,
-        "description": "Разработка с использованием <highlighttext>Python</highlighttext>3. Разработка новых микросервисов для частного облака. Оптимизация существующих проектов компании. Разработка нового функционала, кастомных модулей..."
-    },
-    {
-        "name": "Senior QA automation (web, python) / Ведущий тестировщик ПО",
-        "vacancy_url": "https://hh.ru/vacancy/89262754",
+        "name": "Автотестировщик Python/QA Automation Engineer Python",
+        "vacancy_url": "https://hh.ru/vacancy/90274426",
         "salary_from": 250000,
         "salary_to": 300000,
-        "description": "Написание API и UI авто-тестов под web и поддержка. Автоматизация функционального, регрессионного и e2e тестирования. "
+        "description": "Написание и автоматизация тестовых сценариев (API, UI, Desktop App). Развитие и поддержка решений по автоматизации тестирования. Проведение функционального и регрессионного..."
     },
     {
-        "name": "Спикер для уроков по информационным технологиям (программирование, приложения, криптография,python)",
-        "vacancy_url": "https://hh.ru/vacancy/89043956",
-        "salary_from": 30000,
-        "salary_to": 60000,
-        "description": "...ней, Криптография, ​​​​​​​Сети передачи данных и безопасность, Основы языка программирования <highlighttext>Python</highlighttext>​​​​​​​, Английский язык для начинающих разработчиков​​​​​​​​​​​​​​, ​​​​​​​Безопасность операционных систем , Системное..."
+        "name": "Разработчик С++/Python (senior), Linux, backend, embedded",
+        "vacancy_url": "https://hh.ru/vacancy/90237331",
+        "salary_from": 200000,
+        "salary_to": 250000,
+        "description": "Будет много задач на архитектуру, рефакторинг и разработка “с нуля” решения для управления большими группами контроллеров."
+    },
+    {
+        "name": "Middle Python developer",
+        "vacancy_url": "https://hh.ru/vacancy/72687504",
+        "salary_from": 150000,
+        "salary_to": 200000,
+        "description": "Написание чистого, понятного кода. Ведение (исправление багов, модернизация, улучшение) разработанного микросервиса."
+    },
+    {
+        "name": "Backend Python developer (senior/middle+)",
+        "vacancy_url": "https://hh.ru/vacancy/89136806",
+        "salary_from": 150000,
+        "salary_to": 250000,
+        "description": "Разработка нового функционала проекта и фич. Поддержка существующего функционала. Интеграции с внешними сервисами."
+    },
+    {
+        "name": "Java + Python Продакт Разработчик AIxWEB3 (Удаленно)",
+        "vacancy_url": "https://hh.ru/vacancy/90918830",
+        "salary_from": 290000,
+        "salary_to": 380000,
+        "description": "Связывании баз данных токенов с миллиардами транзакций с пользовательскими интерфейсами. Разработке сервисов аналитики данных с применением GPT. Работе над высокоскоростным..."
     },
     {
         "name": "Репетитор по направлению Python (удалённо)",
